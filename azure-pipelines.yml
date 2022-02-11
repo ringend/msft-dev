@@ -10,5 +10,12 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: ./build.sh
-  displayName: 'Run build script'
+  - task: AzureCLI@2
+  displayName: Deploy Resource Group Resources
+  inputs:
+    azureSubscription: 926984f7-30ab-4094-9fd5-36fa484fba5b
+    scriptType: 'bash'
+    scriptLocation: 'inlineScript'
+    inlineScript: 'az deployment group create --resource-group  bicep-test-rg --subscription 926984f7-30ab-4094-9fd5-36fa484fba5b'
+    #inlineScript: 'az deployment group create --resource-group rg-networking-primary --template-file group-azuredeploy.bicep --parameters ${{ parameters.groupParametersFile }} --subscription ${{ parameters.targetSubscriptionId }}'
+    workingDirectory: 'SpokeDeployment'
