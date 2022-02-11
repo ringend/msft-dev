@@ -1,0 +1,117 @@
+{
+    "name": "aan-spoke01-vnet",
+    "id": "/subscriptions/c288e1aa-16dc-4f65-8bae-6a58b849e60c/resourceGroups/aan-main-eastus-rg/providers/Microsoft.Network/virtualNetworks/aan-spoke01-vnet",
+    "etag": "W/\"58fe4b68-fd80-4228-b573-b2803e504147\"",
+    "type": "Microsoft.Network/virtualNetworks",
+    "location": "eastus",
+    "tags": {
+        "owner": "aan"
+    },
+    "properties": {
+        "provisioningState": "Succeeded",
+        "resourceGuid": "af2b10e1-c6c5-410d-a410-b7ab35a93302",
+        "addressSpace": {
+            "addressPrefixes": [
+                "10.200.16.0/23"
+            ]
+        },
+        "subnets": [
+            {
+                "name": "az-private-endpoints",
+                "id": "/subscriptions/c288e1aa-16dc-4f65-8bae-6a58b849e60c/resourceGroups/aan-main-eastus-rg/providers/Microsoft.Network/virtualNetworks/aan-spoke01-vnet/subnets/az-private-endpoints",
+                "etag": "W/\"58fe4b68-fd80-4228-b573-b2803e504147\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "addressPrefix": "10.200.16.192/26",
+                    "ipConfigurations": [
+                        {
+                            "id": "/subscriptions/c288e1aa-16dc-4f65-8bae-6a58b849e60c/resourceGroups/aan-main-eastus-rg/providers/Microsoft.Network/networkInterfaces/aan-function-blue-pe.nic.adac5391-5c8c-4e29-bd4e-0359d86df721/ipConfigurations/privateEndpointIpConfig.1b1b255c-90f8-42f2-867c-8f041fb6277a"
+                        },
+                        {
+                            "id": "/subscriptions/c288e1aa-16dc-4f65-8bae-6a58b849e60c/resourceGroups/aan-main-eastus-rg/providers/Microsoft.Network/networkInterfaces/aan-redis-pe.nic.d24bf511-0676-4b80-9704-70c19b5c8ac6/ipConfigurations/privateEndpointIpConfig.f3b8a934-76f4-41d7-b9cc-047822d31dae"
+                        },
+                        {
+                            "id": "/subscriptions/c288e1aa-16dc-4f65-8bae-6a58b849e60c/resourceGroups/aan-main-eastus-rg/providers/Microsoft.Network/networkInterfaces/aan-function-white-pe.nic.1edb8ad9-d55d-44b9-9388-04faab428bdd/ipConfigurations/privateEndpointIpConfig.6eec4d95-6cff-4b24-8798-a7646a1db7dd"
+                        },
+                        {
+                            "id": "/subscriptions/c288e1aa-16dc-4f65-8bae-6a58b849e60c/resourceGroups/aan-cosmos-db-rg/providers/Microsoft.Network/networkInterfaces/aan-cosmos-db-01-pe.nic.d59e7475-b63b-41fa-9817-9f2ced855e94/ipConfigurations/privateEndpointIpConfig.492b2513-9084-4800-a6eb-a09be62bf04c"
+                        },
+                        {
+                            "id": "/subscriptions/c288e1aa-16dc-4f65-8bae-6a58b849e60c/resourceGroups/aan-cosmos-db-rg/providers/Microsoft.Network/networkInterfaces/aan-cosmos-db-01-pe.nic.d59e7475-b63b-41fa-9817-9f2ced855e94/ipConfigurations/privateEndpointIpConfig.4c426fb6-a1be-4fa9-8830-c7fa3ac19ca6"
+                        },
+                        {
+                            "id": "/subscriptions/c288e1aa-16dc-4f65-8bae-6a58b849e60c/resourceGroups/aan-main-eastus-rg/providers/Microsoft.Network/networkInterfaces/aan-function-red-pe.nic.79c07b9c-c124-4a23-bc21-8395f2352efd/ipConfigurations/privateEndpointIpConfig.e0fe7857-e76b-4866-b49b-8ae98fd9dabf"
+                        },
+                        {
+                            "id": "/subscriptions/c288e1aa-16dc-4f65-8bae-6a58b849e60c/resourceGroups/aan-main-eastus-rg/providers/Microsoft.Network/networkInterfaces/aan-storage-web-pe.nic.2214feff-b8f4-4adf-a171-c7c1b955079d/ipConfigurations/privateEndpointIpConfig.6ddc427e-1b27-4072-9e70-77afb88a9308"
+                        }
+                    ]
+                },
+                "type": "Microsoft.Network/virtualNetworks/subnets"
+            },
+            {
+                "name": "subnet-01",
+                "id": "/subscriptions/c288e1aa-16dc-4f65-8bae-6a58b849e60c/resourceGroups/aan-main-eastus-rg/providers/Microsoft.Network/virtualNetworks/aan-spoke01-vnet/subnets/subnet-01",
+                "etag": "W/\"58fe4b68-fd80-4228-b573-b2803e504147\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "addressPrefix": "10.200.16.0/25",
+                    "networkSecurityGroup": {
+                        "id": "/subscriptions/c288e1aa-16dc-4f65-8bae-6a58b849e60c/resourceGroups/aan-main-eastus-rg/providers/Microsoft.Network/networkSecurityGroups/aan-spoke01-nsg"
+                    },
+                    "ipConfigurations": [
+                        {
+                            "id": "/subscriptions/c288e1aa-16dc-4f65-8bae-6a58b849e60c/resourceGroups/aan-spoke01-vm01_group/providers/Microsoft.Network/networkInterfaces/aan-spoke01-vm01687/ipConfigurations/ipconfig1"
+                        },
+                        {
+                            "id": "/subscriptions/c288e1aa-16dc-4f65-8bae-6a58b849e60c/resourceGroups/aan-spoke01-vm02_group/providers/Microsoft.Network/networkInterfaces/aan-spoke01-vm02900/ipConfigurations/ipconfig1"
+                        }
+                    ]
+                },
+                "type": "Microsoft.Network/virtualNetworks/subnets"
+            },
+            {
+                "name": "app-service-01",
+                "id": "/subscriptions/c288e1aa-16dc-4f65-8bae-6a58b849e60c/resourceGroups/aan-main-eastus-rg/providers/Microsoft.Network/virtualNetworks/aan-spoke01-vnet/subnets/app-service-01",
+                "etag": "W/\"58fe4b68-fd80-4228-b573-b2803e504147\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "addressPrefix": "10.200.16.128/26",
+                    "networkSecurityGroup": {
+                        "id": "/subscriptions/c288e1aa-16dc-4f65-8bae-6a58b849e60c/resourceGroups/aan-main-eastus-rg/providers/Microsoft.Network/networkSecurityGroups/aan-app-service-01-nsg"
+                    }
+                },
+                "type": "Microsoft.Network/virtualNetworks/subnets"
+            },
+            {
+                "name": "az-mysql",
+                "id": "/subscriptions/c288e1aa-16dc-4f65-8bae-6a58b849e60c/resourceGroups/aan-main-eastus-rg/providers/Microsoft.Network/virtualNetworks/aan-spoke01-vnet/subnets/az-mysql",
+                "etag": "W/\"58fe4b68-fd80-4228-b573-b2803e504147\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "addressPrefix": "10.200.17.0/28",
+                    "networkSecurityGroup": {
+                        "id": "/subscriptions/c288e1aa-16dc-4f65-8bae-6a58b849e60c/resourceGroups/aan-main-eastus-rg/providers/Microsoft.Network/networkSecurityGroups/aan-az-mysql-nsg"
+                    }
+                },
+                "type": "Microsoft.Network/virtualNetworks/subnets"
+            },
+            {
+                "name": "az-sqlmi",
+                "id": "/subscriptions/c288e1aa-16dc-4f65-8bae-6a58b849e60c/resourceGroups/aan-main-eastus-rg/providers/Microsoft.Network/virtualNetworks/aan-spoke01-vnet/subnets/az-sqlmi",
+                "etag": "W/\"58fe4b68-fd80-4228-b573-b2803e504147\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "addressPrefix": "10.200.17.128/25",
+                    "networkSecurityGroup": {
+                        "id": "/subscriptions/c288e1aa-16dc-4f65-8bae-6a58b849e60c/resourceGroups/aan-main-eastus-rg/providers/Microsoft.Network/networkSecurityGroups/nsg-aan-sqlmi-01"
+                    },
+                    "routeTable": {
+                        "id": "/subscriptions/c288e1aa-16dc-4f65-8bae-6a58b849e60c/resourceGroups/aan-main-eastus-rg/providers/Microsoft.Network/routeTables/rt-aan-sqlmi-01"
+                    }
+                },
+                "type": "Microsoft.Network/virtualNetworks/subnets"
+            }
+        ]
+    }
+}
