@@ -18,13 +18,11 @@ stages:
       displayName: Build 1
       steps:
         - task: AzureCLI@2
-          displayName: Azure CLI
-          inputs:
-            azureSubscription: djr-msft-dev
-            scriptType: bash
-            scriptLocation: inlineScript
-            inlineScript: |
-              az --version
-              az account show
-              az group create --location centralus --resource-group bicep-test-rg
-              
+        displayName: Azure CLI
+        inputs:
+          azureSubscription: djr-msft-dev
+          scriptType: bash
+          scriptLocation: inlineScript
+          inlineScript: |
+            az --version
+            az account show
