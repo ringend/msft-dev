@@ -22,6 +22,7 @@ stages:
           inputs:
             azureSubscription: djr-msft-dev
             scriptType: bash
+            workingDirectory: 'vnet'
             scriptLocation: inlineScript
             inlineScript: |
               az --version
