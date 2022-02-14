@@ -9,6 +9,7 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
+job: Build
 steps:
     - task: AzureCLI@2
     displayName: Azure CLI
