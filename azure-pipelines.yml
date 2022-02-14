@@ -18,14 +18,12 @@ stages:
       displayName: Build 1
       steps:
         - task: AzureCLI@2
-          displayName: Azure CLI
+          displayName: Build Vnet
           inputs:
             azureSubscription: djr-msft-dev
             scriptType: bash
             workingDirectory: 'vnet'
             scriptLocation: inlineScript
             inlineScript: |
-              az --version
-              az account show
               az group create --location centralus --resource-group bicep-test-rg
-              az deployment group create -g bicep-test-rg  --template-file test-1.bicep
+              az deployment group create -g bicep-test-rg  --template-file vnet-1.bicep
