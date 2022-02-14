@@ -23,4 +23,4 @@ stages:
             azureSubscription: djr-msft-dev
             scriptType: bash
             workingDirectory: vnet
-            scriptPath: build.sh
+            scriptPath: ./vnet/build.sh
