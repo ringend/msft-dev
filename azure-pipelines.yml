@@ -11,11 +11,11 @@ pool:
 
 
 stages:
-  - stage: Stage-1
-    displayName: Stage-1
+  - stage: Stage_1
+    displayName: Stage 1
     jobs:  
-    - job: Build-1
-      displayName: Build-1
+    - job: Build_1
+      displayName: Build 1
       steps:
         - task: AzureCLI@2
           displayName: Azure CLI
