@@ -1,5 +1,7 @@
 #!/bin/bash
 
+az --version
+az account show
 #az group create --location centralus --resource-group bicep-test-rg
-#az deployment group create -g bicep-test-rg  --template-file test-1.bicep 
-ls
+#az deployment group create -g bicep-test-rg  --template-file test-1.bicep
+
