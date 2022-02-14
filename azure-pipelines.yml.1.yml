@@ -17,10 +17,12 @@ stages:
     - job: Build_1
       displayName: Build 1
       steps:
-        - task: ShellScript@2
-          displayName: build.sh
+        - task: AzureCLI@2
+          displayName: Azure CLI
           inputs:
             azureSubscription: djr-msft-dev
             scriptType: bash
             scriptLocation: inlineScript
-            scriptPath: ./vnet/build.sh
+            inlineScript: |
+              az --version
+              az account show
