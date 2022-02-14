@@ -9,15 +9,20 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
--job: Build
-displayName: Build
-steps:
-    - task: AzureCLI@2
-    displayName: Azure CLI
-    inputs:
-      azureSubscription: djr-msft-dev
-      scriptType: bash
-      scriptLocation: inlineScript
-      inlineScript: |
-        az --version
-        az account show
+
+stages:
+  - stage: Stage-1
+    displayName: Stage-1
+    jobs:  
+    - job: Build-1
+      displayName: Build-1
+      steps:
+        - task: AzureCLI@2
+          displayName: Azure CLI
+          inputs:
+            azureSubscription: djr-msft-dev
+            scriptType: bash
+            scriptLocation: inlineScript
+            inlineScript: |
+              az --version
+              az account show
