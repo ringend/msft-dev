@@ -1,5 +1,3 @@
-#!/bin/bash
-
 az --version
 az account show
 #az group create --location centralus --resource-group bicep-test-rg
